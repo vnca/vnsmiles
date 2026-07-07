@@ -1,0 +1,51 @@
+---
+---
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>VnSmiles Content Manager</title>
+  </head>
+  <body>
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+    <script is:inline>
+      window.CMS_MANUAL_INIT = true;
+      const interval = setInterval(() => {
+        if (window.CMS) {
+          clearInterval(interval);
+          window.CMS.init({
+            config: {
+              backend: {
+                name: 'github',
+                repo: 'vnca/vnsmiles', // Thay bằng username/repo thật của bạn
+                branch: 'main',
+              },
+              local_backend: true, // Chạy local test trên NanoPi R3S
+              media_folder: 'public/images/blog',
+              public_folder: '/images/blog',
+              collections: [
+                {
+                  name: 'blog',
+                  label: 'Blog Posts',
+                  folder: 'src/content/blog',
+                  create: true,
+                  slug: '{{slug}}',
+                  fields: [
+                    { label: 'Title', name: 'title', widget: 'string' },
+                    { label: 'Description', name: 'description', widget: 'string' },
+                    { label: 'Publish Date', name: 'pubDate', widget: 'datetime', format: 'YYYY-MM-DD' },
+                    { label: 'Hero Image', name: 'heroImage', widget: 'image', default: '/blog-placeholder-about.jpg', required: false },
+                    { label: 'Body', name: 'body', widget: 'markdown' },
+                  ],
+                },
+              ],
+            },
+          });
+        }
+      }, 100);
+    </script>
+  </body>
+</html>
