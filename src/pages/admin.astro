@@ -1,6 +1,6 @@
 cat << 'EOF' > src/pages/admin.astro
 ---
-/* admin.astro - Giao diện quản trị viết bài */
+/* admin.astro - Giao diện quản trị viết bài bằng Sveltia CMS */
 ---
 <!DOCTYPE html>
 <html lang="vi">
@@ -8,7 +8,8 @@ cat << 'EOF' > src/pages/admin.astro
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Trang quản trị Blog - VnSmiles</title>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <!-- Nhúng thư viện Sveltia CMS hiện đại, tương thích 100% với Cloudflare Pages -->
+  <script src="https://unpkg.com/@sveltia/cms@0.41.0/dist/sveltia-cms.js"></script>
 </head>
 <body>
   <script is:inline>
@@ -21,7 +22,7 @@ cat << 'EOF' > src/pages/admin.astro
             name: 'github',
             repo: 'vnca/vnsmiles',
             branch: 'main',
-            base_url: 'https://vnsmiles-cms-oauth.vna.workers.dev', // Gốc Worker riêng của bạn
+            base_url: 'https://vnsmiles-cms-oauth.vna.workers.dev', // Giữ nguyên Worker của bạn
             clear_hash: true
           },
           load_config_file: false,
