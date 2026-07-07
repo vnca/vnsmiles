@@ -1,6 +1,6 @@
 cat << 'EOF' > src/pages/admin.astro
 ---
-/* admin.astro - Giao diện quản trị Sveltia CMS */
+/* admin.astro - Giao diện quản trị Sveltia CMS rút gọn */
 ---
 <!DOCTYPE html>
 <html lang="vi">
@@ -39,32 +39,6 @@ cat << 'EOF' > src/pages/admin.astro
                 { label: 'Ngày đăng', name: 'date', widget: 'datetime' },
                 { label: 'Mô tả ngắn', name: 'description', widget: 'string' },
                 { label: 'Nội dung bài viết', name: 'body', widget: 'markdown' }
-              ]
-            },
-            {
-              name: 'pages',
-              label: 'Các trang cố định',
-              delete: false,
-              files: [
-                {
-                  name: 'home',
-                  label: 'Trang chủ (Home)',
-                  file: 'src/content/home.md',
-                  fields: [
-                    { label: 'Slogan / Tiêu đề chính', name: 'title', widget: 'string' },
-                    { label: 'Đoạn giới thiệu ngắn', name: 'intro', widget: 'text' }
-                  ]
-                },
-                {
-                  name: 'about',
-                  label: 'Trang giới thiệu (About)',
-                  file: 'src/content/about.md', // File lưu nội dung giới thiệu
-                  fields: [
-                    { label: 'Tiêu đề trang', name: 'title', widget: 'string' },
-                    { label: 'Ảnh đại diện', name: 'avatar', widget: 'image', required: false },
-                    { label: 'Nội dung chi tiết', name: 'body', widget: 'markdown' }
-                  ]
-                }
               ]
             }
           ]
