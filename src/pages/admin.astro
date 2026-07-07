@@ -1,6 +1,6 @@
 cat << 'EOF' > src/pages/admin.astro
 ---
-/* admin.astro - Giao diện quản trị viết bài bằng Sveltia CMS */
+/* admin.astro - Giao diện quản trị Sveltia CMS */
 ---
 <!DOCTYPE html>
 <html lang="vi">
@@ -8,7 +8,6 @@ cat << 'EOF' > src/pages/admin.astro
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Trang quản trị Blog - VnSmiles</title>
-  <!-- Nhúng thư viện Sveltia CMS hiện đại, tương thích 100% với Cloudflare Pages -->
   <script src="https://unpkg.com/@sveltia/cms@0.41.0/dist/sveltia-cms.js"></script>
 </head>
 <body>
@@ -22,7 +21,7 @@ cat << 'EOF' > src/pages/admin.astro
             name: 'github',
             repo: 'vnca/vnsmiles',
             branch: 'main',
-            base_url: 'https://vnsmiles-cms-oauth.vna.workers.dev', // Giữ nguyên Worker của bạn
+            base_url: 'https://vnsmiles-cms-oauth.vna.workers.dev',
             clear_hash: true
           },
           load_config_file: false,
@@ -40,6 +39,32 @@ cat << 'EOF' > src/pages/admin.astro
                 { label: 'Ngày đăng', name: 'date', widget: 'datetime' },
                 { label: 'Mô tả ngắn', name: 'description', widget: 'string' },
                 { label: 'Nội dung bài viết', name: 'body', widget: 'markdown' }
+              ]
+            },
+            {
+              name: 'pages',
+              label: 'Các trang cố định',
+              delete: false,
+              files: [
+                {
+                  name: 'home',
+                  label: 'Trang chủ (Home)',
+                  file: 'src/content/home.md',
+                  fields: [
+                    { label: 'Slogan / Tiêu đề chính', name: 'title', widget: 'string' },
+                    { label: 'Đoạn giới thiệu ngắn', name: 'intro', widget: 'text' }
+                  ]
+                },
+                {
+                  name: 'about',
+                  label: 'Trang giới thiệu (About)',
+                  file: 'src/content/about.md', // File lưu nội dung giới thiệu
+                  fields: [
+                    { label: 'Tiêu đề trang', name: 'title', widget: 'string' },
+                    { label: 'Ảnh đại diện', name: 'avatar', widget: 'image', required: false },
+                    { label: 'Nội dung chi tiết', name: 'body', widget: 'markdown' }
+                  ]
+                }
               ]
             }
           ]
