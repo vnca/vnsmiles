@@ -1,5 +1,5 @@
 ---
-/* admin.astro - Giao diện quản trị Sveltia CMS chuẩn khớp với heroImage */
+/* admin.astro - Giao diện quản trị Sveltia CMS tối ưu đường dẫn ảnh cho Astro */
 ---
 <!DOCTYPE html>
 <html lang="vi">
@@ -25,7 +25,7 @@
           },
           load_config_file: false,
           media_folder: 'public/images/uploads',
-          public_folder: '/images/uploads',
+          public_folder: '/public/images/uploads', // Thêm dấu gạch chéo ở đầu để định tuyến chuẩn absolute
           collections: [
             {
               name: 'blog',
