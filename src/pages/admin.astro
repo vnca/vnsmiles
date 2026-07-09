@@ -1,5 +1,5 @@
 ---
-/* admin.astro - Giao diện quản trị Sveltia CMS đã được TỐI ƯU RESPONSIVE */
+/* admin.astro - Giao diện quản trị Sveltia CMS tối ưu Responsive HOÀN HẢO trên Mobile */
 ---
 <!DOCTYPE html>
 <html lang="vi">
@@ -10,55 +10,72 @@
   <script src="https://unpkg.com/@sveltia/cms@0.41.0/dist/sveltia-cms.js"></script>
   
   <style is:global>
-    /* Tối ưu hóa vùng chứa trên thiết bị di động */
     body {
       margin: 0;
       padding: 0;
       overflow-x: hidden;
     }
     
-    /* Khi màn hình nhỏ hơn 768px (Điện thoại và máy tính bảng nhỏ) */
+    /* Ép responsive mạnh mẽ hơn khi xem trên điện thoại (< 768px) */
     @media (max-width: 768px) {
-      /* Ép các khu vực chính chuyển thành một cột dọc */
-      div[class*="AppLayout"], div[class*="MainLayout"] {
+      /* Khối chính bọc toàn bộ ứng dụng */
+      div[class*="app-layout"], div[class*="AppLayout"], .app-container {
         flex-direction: column !important;
         display: block !important;
       }
       
-      /* Thu gọn sidebar menu trái thành thanh cuộn ngang hoặc đẩy xuống dưới */
-      aside, div[class*="Sidebar"] {
+      /* Xử lý riêng cho cột Menu bên trái đang chiếm diện tích */
+      aside, 
+      div[class*="sidebar"], 
+      div[class*="Sidebar"],
+      div[role="navigation"] {
         width: 100% !important;
         max-width: 100% !important;
+        min-width: 100% !important;
         position: relative !important;
         height: auto !important;
         box-shadow: none !important;
         border-bottom: 1px solid #e5e7eb;
-      }
-      
-      /* Phóng to các ô nhập liệu để dễ bấm bằng tay trên điện thoại */
-      input, textarea, select, .w-md-editor {
-        font-size: 16px !important; /* Tránh iOS tự động zoom màn hình khi focus vào ô nhập */
-        padding: 12px !important;
-      }
-      
-      /* Khu vực danh sách bài viết hiển thị full chiều ngang */
-      main, div[class*="CollectionVisualizer"], div[class*="EditorContainer"] {
-        padding: 10px !important;
-        width: 100% !important;
+        padding: 8px !important;
         box-sizing: border-box !important;
       }
-
-      /* Chuyển các hàng nút bấm hành động (Publish, Save) thành hàng ngang cố định hoặc xếp dọc */
-      div[class*="Toolbar"] {
-        padding: 8px !important;
+      
+      /* Thu gọn danh sách menu con bên trong thành hàng ngang thay vì xếp dọc */
+      aside ul, div[class*="Sidebar"] ul {
+        display: flex !important;
+        flex-direction: row !important;
         gap: 8px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        overflow-x: auto;
+      }
+
+      /* Khu vực hiển thị danh sách bài viết bên phải */
+      main, 
+      div[class*="main-content"], 
+      div[class*="CollectionVisualizer"], 
+      div[class*="EditorContainer"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 12px !important;
+        box-sizing: border-box !important;
+        display: block !important;
+      }
+
+      /* Ép các dòng bài viết hiển thị rộng rãi, không bị nén chữ */
+      div[class*="row"], tr, [role="row"] {
+        width: 100% !important;
       }
       
-      /* Tối ưu bảng danh sách bài viết trên mobile thành dạng thẻ (card) cuộn dọc */
-      table {
-        display: block !important;
-        overflow-x: auto !important;
-        white-space: nowrap !important;
+      /* Giúp chữ tiêu đề hiển thị đầy đủ, tự động xuống dòng nếu quá dài */
+      span[class*="title"], div[class*="label"], .primary-text {
+        white-space: normal !important;
+        word-break: break-word !important;
+      }
+
+      /* Cải thiện ô nhập liệu tránh tự động zoom trên màn hình iOS */
+      input, textarea, select {
+        font-size: 16px !important;
       }
     }
   </style>
