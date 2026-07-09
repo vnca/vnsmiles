@@ -1,74 +1,13 @@
 ---
-/* admin.astro - Giao diện quản trị Sveltia CMS tối ưu Responsive hoàn chỉnh */
+/* admin.astro - Giao diện quản trị Sveltia CMS nguyên bản chuẩn hóa dữ liệu */
 ---
 <!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Trang quản trị Blog - VnSmiles</title>
   <script src="https://unpkg.com/@sveltia/cms@0.41.0/dist/sveltia-cms.js"></script>
-  
-  <style is:global>
-    body {
-      margin: 0;
-      padding: 0;
-    }
-    
-    /* Chỉ can thiệp responsive trên màn hình di động nhỏ dưới 768px */
-    @media (max-width: 768px) {
-      /* Tìm container lớn chứa sidebar và main content để chia lại tỷ lệ màn hình */
-      div[class*="AppLayout"], div[class*="MainLayout"] {
-        display: grid !important;
-        grid-template-rows: auto 1fr !important; /* Menu ở trên tự co, nội dung ở dưới chiếm hết chỗ trống */
-        height: 100vh !important;
-        flex-direction: column !important;
-      }
-      
-      /* Thu gọn sidebar menu trái thành một dải mỏng phía trên */
-      aside, 
-      div[class*="sidebar"], 
-      div[class*="Sidebar"],
-      div[role="navigation"] {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 100% !important;
-        height: auto !important;
-        position: relative !important;
-        padding: 4px 8px !important;
-        border-bottom: 1px solid #e5e7eb;
-        box-sizing: border-box !important;
-      }
-      
-      /* Đẩy phần danh sách bài viết lên ngay phía dưới menu, cho phép cuộn nội dung độc lập */
-      main, 
-      div[class*="main-content"], 
-      div[class*="CollectionVisualizer"], 
-      div[class*="EditorContainer"] {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 8px !important;
-        box-sizing: border-box !important;
-        overflow-y: auto !important; /* Cho phép cuộn danh sách bài viết mượt mà */
-      }
-
-      /* Tối ưu hóa bảng để hiển thị vừa vặn, cho phép vuốt ngang nhẹ nếu quá dài */
-      table, div[class*="Table"] {
-        width: 100% !important;
-        display: table !important; /* Trả lại thuộc tính table gốc để không mất hàng cột */
-      }
-      
-      /* Cho phép tiêu đề tự xuống dòng khi màn hình quá hẹp */
-      span[class*="title"], div[class*="label"], td {
-        white-space: normal !important;
-        word-break: break-word !important;
-      }
-      
-      input, textarea, select {
-        font-size: 16px !important;
-      }
-    }
-  </style>
 </head>
 <body>
   <script is:inline>
