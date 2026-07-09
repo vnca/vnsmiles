@@ -1,5 +1,5 @@
 ---
-/* admin.astro - Giao diện quản trị Sveltia CMS chuẩn Theme Astro */
+/* admin.astro - Giao diện quản trị Sveltia CMS chuẩn khớp với heroImage */
 ---
 <!DOCTYPE html>
 <html lang="vi">
@@ -36,6 +36,7 @@
               fields: [
                 { label: 'Tiêu đề', name: 'title', widget: 'string' },
                 { label: 'Ngày đăng', name: 'pubDate', widget: 'datetime', format: 'YYYY-MM-DDTHH:mm:ssZ' },
+                { label: 'Ảnh đại diện bài viết (Featured Image)', name: 'heroImage', widget: 'image', required: false },
                 { label: 'Mô tả ngắn', name: 'description', widget: 'string' },
                 { label: 'Nội dung bài viết', name: 'body', widget: 'markdown' }
               ]
