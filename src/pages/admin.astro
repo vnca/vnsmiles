@@ -1,5 +1,5 @@
 ---
-/* admin.astro - Giao diện quản trị Sveltia CMS tối ưu Responsive HOÀN HẢO trên Mobile */
+/* admin.astro - Giao diện quản trị Sveltia CMS tối ưu Responsive hoàn chỉnh */
 ---
 <!DOCTYPE html>
 <html lang="vi">
@@ -13,18 +13,19 @@
     body {
       margin: 0;
       padding: 0;
-      overflow-x: hidden;
     }
     
-    /* Ép responsive mạnh mẽ hơn khi xem trên điện thoại (< 768px) */
+    /* Chỉ can thiệp responsive trên màn hình di động nhỏ dưới 768px */
     @media (max-width: 768px) {
-      /* Khối chính bọc toàn bộ ứng dụng */
-      div[class*="app-layout"], div[class*="AppLayout"], .app-container {
+      /* Tìm container lớn chứa sidebar và main content để chia lại tỷ lệ màn hình */
+      div[class*="AppLayout"], div[class*="MainLayout"] {
+        display: grid !important;
+        grid-template-rows: auto 1fr !important; /* Menu ở trên tự co, nội dung ở dưới chiếm hết chỗ trống */
+        height: 100vh !important;
         flex-direction: column !important;
-        display: block !important;
       }
       
-      /* Xử lý riêng cho cột Menu bên trái đang chiếm diện tích */
+      /* Thu gọn sidebar menu trái thành một dải mỏng phía trên */
       aside, 
       div[class*="sidebar"], 
       div[class*="Sidebar"],
@@ -32,48 +33,37 @@
         width: 100% !important;
         max-width: 100% !important;
         min-width: 100% !important;
-        position: relative !important;
         height: auto !important;
-        box-shadow: none !important;
+        position: relative !important;
+        padding: 4px 8px !important;
         border-bottom: 1px solid #e5e7eb;
-        padding: 8px !important;
         box-sizing: border-box !important;
       }
       
-      /* Thu gọn danh sách menu con bên trong thành hàng ngang thay vì xếp dọc */
-      aside ul, div[class*="Sidebar"] ul {
-        display: flex !important;
-        flex-direction: row !important;
-        gap: 8px !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        overflow-x: auto;
-      }
-
-      /* Khu vực hiển thị danh sách bài viết bên phải */
+      /* Đẩy phần danh sách bài viết lên ngay phía dưới menu, cho phép cuộn nội dung độc lập */
       main, 
       div[class*="main-content"], 
       div[class*="CollectionVisualizer"], 
       div[class*="EditorContainer"] {
         width: 100% !important;
         max-width: 100% !important;
-        padding: 12px !important;
+        padding: 8px !important;
         box-sizing: border-box !important;
-        display: block !important;
+        overflow-y: auto !important; /* Cho phép cuộn danh sách bài viết mượt mà */
       }
 
-      /* Ép các dòng bài viết hiển thị rộng rãi, không bị nén chữ */
-      div[class*="row"], tr, [role="row"] {
+      /* Tối ưu hóa bảng để hiển thị vừa vặn, cho phép vuốt ngang nhẹ nếu quá dài */
+      table, div[class*="Table"] {
         width: 100% !important;
+        display: table !important; /* Trả lại thuộc tính table gốc để không mất hàng cột */
       }
       
-      /* Giúp chữ tiêu đề hiển thị đầy đủ, tự động xuống dòng nếu quá dài */
-      span[class*="title"], div[class*="label"], .primary-text {
+      /* Cho phép tiêu đề tự xuống dòng khi màn hình quá hẹp */
+      span[class*="title"], div[class*="label"], td {
         white-space: normal !important;
         word-break: break-word !important;
       }
-
-      /* Cải thiện ô nhập liệu tránh tự động zoom trên màn hình iOS */
+      
       input, textarea, select {
         font-size: 16px !important;
       }
