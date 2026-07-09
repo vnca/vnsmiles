@@ -1,6 +1,6 @@
 ---
 title: Chung cư Hoàng Anh An Tiến
-date: 2026-07-09T08:42:00
+pubDate: 2026-07-09T08:42:00
 description: Đây là chung cư Hoàng Anh An Tiến, nơi vợ chồng mình ở tại Sài Gòn khoảng năm 2020-2021.
 ---
 Đây là chung cư Hoàng Anh An Tiến, nơi vợ chồng mình ở tại Sài Gòn khoảng năm 2020-2021.
