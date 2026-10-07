@@ -2,7 +2,7 @@
 title: Thành phố nhỏ hay thành phố lớn?
 pubDate: 2026-09-22T13:31:00+07:00
 heroImage: /public/images/uploads/IMG_9526.jpeg
-description: Mấy hôm nay nhà mình trăn trở khá nhiều về việc sẽ ở lâu dài tại nơi nào. Hiện tại gia đình mình ở 1 thảnh phố nhỏ gần biển phía đông và đang suy nghĩ về việc chuyển sang 1 thành phố lớn phía tây.
+description: Mấy hôm nay nhà mình trăn trở khá nhiều về việc sẽ ở lâu dài tại nơi nào. Hiện tại gia đình mình ở 1 thành phố nhỏ gần biển phía đông và đang suy nghĩ về việc chuyển sang 1 thành phố lớn phía tây.
 ---
 Mấy hôm nay nhà mình trăn trở khá nhiều về việc sẽ ở lâu dài tại nơi nào. Hiện tại gia đình mình ở 1 thảnh phố nhỏ gần biển phía đông và đang suy nghĩ về việc chuyển sang 1 thành phố lớn phía tây.
 
