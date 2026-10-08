@@ -8,12 +8,9 @@ description: Ở bài viết trước, mình đã nhắc tới một công cụ 
 
 Trước tiên, xin nhắc lại 3 yếu tố cần cân nhắc khi thay đổi công việc:
 
-    Khả năng học hỏi, tích lũy thêm kiến thức, kinh nghiệm, trải nghiệm.
-
-    Lương, thưởng, chế độ phúc lợi đi kèm với công việc.
-
-    Khả năng thăng tiến, lên chức, đi kèm với các mối quan hệ.
-
+- Khả năng học hỏi, tích lũy thêm kiến thức, kinh nghiệm, trải nghiệm.
+- Lương, thưởng, chế độ phúc lợi đi kèm với công việc.
+- Khả năng thăng tiến, lên chức, đi kèm với các mối quan hệ.
 
 Áp dụng cho công việc hiện tại của mình như sau.
 
@@ -39,15 +36,11 @@ Mình không phải là một người giỏi quan hệ ngoại giao, đó là �
 
 Nói về công việc hiện tại, vị trí của mình phải qua 1 cầu nối với bộ phận IT, và người phụ trách việc này khiến mình không thể nào yêu thích công việc được. Ngoài ra, sau đây là những điều khiến mình không hài lòng về bộ phận IT và mình không muốn tiếp tục sự nghiệp của mình với bộ phận này:
 
--        Hạn chế khả năng truy cập, quyền thực hiện trên hệ thống mặc dù các tài khoản đc tạo ra với những mục đích đó???
-
--        Tỏ ra hiểu biết, senior và giấu nghề, không chỉ dẫn cho người khác vì sợ người ta biết đc thì sẽ giỏi hơn mình, ma cũ bắt nạt ma mới. Mình tưởng điều này chỉ có ở mấy người lớn tuổi, thế hệ trước ở các doanh nghiệp nhà nước, ai dè sang Canada rồi vẫn gặp kiểu người này.
-
--         Chậm chạp, những task nhỏ theo mình tối đa 30p là xong cũng kéo dài tới vài ngày, vài tuần, thậm chí vài tháng.
-
--        Hạn chế khả năng tiếp cận tới các công nghệ mới. Theo lý thuyết, IT nên là những người khuyến khích, tìm cách ứng dụng các công nghệ mới để tăng năng suất cho công ty, nhưng ở đây thì ngược lại. Những công nghệ mới mà thế giới dùng vài năm rồi thì ở đây mới bắt đầu thử nghiệm trên phạm vi cực nhỏ, hạn chế truy cập tối đa. Nếu 1 người muốn dùng thì phải qua 7749 lần phê duyệt tới 5-6 tháng mới xong. Khi đó thì yêu cầu từ phía đội ngũ kinh doanh hay khách hàng đã mất rồi.
-
--        Sử dụng phần mềm, công nghệ đóng. Với những phần mềm này, khi bạn trỏ thành “expert” của nó thì bạn cũng ko thể ứng dụng ở bất kì đâu khác. Nếu công ty thay đổi platform, thay đổi phần mềm, bạn trở thành vô dụng vì những gì bạn tích lũy hàng năm trời giờ không có ích gì cả. Khả năng thay đổi, bị thay thế là chắc chắn đối với những phần mềm dạng này.
+-    Hạn chế khả năng truy cập, quyền thực hiện trên hệ thống mặc dù các tài khoản đc tạo ra với những mục đích đó???
+-    Tỏ ra hiểu biết, senior và giấu nghề, không chỉ dẫn cho người khác vì sợ người ta biết đc thì sẽ giỏi hơn mình, ma cũ bắt nạt ma mới. Mình tưởng điều này chỉ có ở mấy người lớn tuổi, thế hệ trước ở các doanh nghiệp nhà nước, ai dè sang Canada rồi vẫn gặp kiểu người này.
+-    Chậm chạp, những task nhỏ theo mình tối đa 30p là xong cũng kéo dài tới vài ngày, vài tuần, thậm chí vài tháng.
+-    Hạn chế khả năng tiếp cận tới các công nghệ mới. Theo lý thuyết, IT nên là những người khuyến khích, tìm cách ứng dụng các công nghệ mới để tăng năng suất cho công ty, nhưng ở đây thì ngược lại. Những công nghệ mới mà thế giới dùng vài năm rồi thì ở đây mới bắt đầu thử nghiệm trên phạm vi cực nhỏ, hạn chế truy cập tối đa. Nếu 1 người muốn dùng thì phải qua 7749 lần phê duyệt tới 5-6 tháng mới xong. Khi đó thì yêu cầu từ phía đội ngũ kinh doanh hay khách hàng đã mất rồi.
+-    Sử dụng phần mềm, công nghệ đóng. Với những phần mềm này, khi bạn trỏ thành “expert” của nó thì bạn cũng ko thể ứng dụng ở bất kì đâu khác. Nếu công ty thay đổi platform, thay đổi phần mềm, bạn trở thành vô dụng vì những gì bạn tích lũy hàng năm trời giờ không có ích gì cả. Khả năng thay đổi, bị thay thế là chắc chắn đối với những phần mềm dạng này.
 
 Có thể nói, bộ phận IT của công ty đã làm mình thay đổi hoàn toàn khái niệm về nhân viên IT mà mình từng biết. Đối với mình, nhân viên IT dù bất kì vị trí nào, từ BA tới Coder, Tester, Product… đều là những người thông minh nhanh nhẹn, đặt ưu tiên của business lên hàng đầu và luôn mong muốn thay đổi, áp dụng những gì mới nhất, tốt nhất để phục vụ cho công việc. Do đó, mình không muốn thăng tiến vào môi trường này và cũng không muốn làm việc với những con người như vậy nữa.
 
