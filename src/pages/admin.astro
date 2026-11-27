@@ -37,6 +37,13 @@
               folder: 'src/content/blog',
               create: true,
               slug: '{{slug}}',
+              sortable_fields: {
+                fields: ['title', 'pubDate'],
+                default: {
+                  field: 'pubDate',
+                  direction: 'descending'
+                }
+              },
               fields: [
                 { label: 'Tiêu đề', name: 'title', widget: 'string' },
                 { label: 'Ngày đăng', name: 'pubDate', widget: 'datetime', format: 'YYYY-MM-DDTHH:mm:ssZ' },
