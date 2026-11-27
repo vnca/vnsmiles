@@ -26,6 +26,10 @@
           load_config_file: false,
           media_folder: 'public/images/uploads',
           public_folder: '/public/images/uploads',
+          slug: {
+            encoding: 'ascii',
+            clean_accents: true
+          },
           collections: [
             {
               name: 'blog',
